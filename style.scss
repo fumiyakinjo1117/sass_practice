@@ -1,0 +1,148 @@
+//変数
+$font-color:#fff;
+$border-color:1px solid red;
+
+//@mixin
+@mixin heading{
+    color:rgba(189,10,16,1);
+    letter-spacing: 7px;
+    font-size:35px;
+    font-weight:bold;
+    border-bottom:1px solid red;
+    padding-top:30px;
+    padding-bottom:15px;
+    margin-bottom:30px;
+    font-family: Georgia, serif;
+}
+
+*{
+    padding:0;
+    margin:0;
+    font-family: Georgia, Verdana, sans-serif;
+}
+
+//header
+header{
+    height:65px;
+    .header-menu{
+        position: fixed;    
+        background-color:#000;
+        opacity:0.8;
+        width:100%;
+        text-align: center;
+
+        a{
+            line-height: 65px;
+            font-size:18px;
+            color:$font-color;
+            font-weight:bold;
+        }
+
+        a:hover{
+            opacity:0.7;
+            color:$font-color;
+        }
+    }
+    
+}
+
+//top
+.top-wrapper{
+    background:url(../img/bz02.jpg);
+    background-position: center top;
+    padding-bottom: 500px;
+    background-size: cover;
+    height:600px;
+    .container{
+        color:$font-color;
+        
+        h1{
+            font-size:80px;
+            padding:30px 0 0 0;
+            
+         }
+    
+         p{
+            text-align:center;
+            font-size:60px;
+            font-weight:bold;
+            margin-bottom:30px;
+            display:none;
+            
+            .fa-chevron-down{
+                opacity:0.8;
+            }
+        }
+    }
+}
+
+.heading{
+    @include heading
+}
+
+//releases
+.releases{
+    display: flex;
+    justify-content: space-around;
+    color: $font-color;
+    text-align: center;
+    .r-img{
+        display: inline-block;
+        height: 200px;
+        
+        img{
+            height: 100%;
+            
+        }
+    }
+}
+
+//news
+.news_list{
+    text-align: center;
+    li{
+        border-bottom:1px solid #880000;
+        margin:16px 0 16px 0;
+        opacity:0.8;
+    }
+    li:hover{
+        opacity:1;
+     }
+     li a p{
+        display:inline-block;
+        color:white;
+        
+    }
+}
+
+.news_list .tag span {
+    padding: 4px 10px;
+    font-size: 11px;
+    background: #c00;
+    width: 100%;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.sns_icon{
+    display: flex;
+    justify-content: space-around;
+
+    li{
+        text-decoration: none;
+        opacity: 0.8;
+    }
+    li:hover{
+        opacity:1;
+    }
+}
+.contact p{
+    color:$font-color;
+    border-bottom:$border-color;
+}
+
+footer{
+    text-align: center;
+    margin:30px 0;
+    color:$font-color;
+}
